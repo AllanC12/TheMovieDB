@@ -12,7 +12,6 @@ const Home = () => {
 
   useEffect(()=> {
     dispatch(getMovies(topRatedUrl))
-    console.log(movies)
   },[])
 
   return <div>Home</div>;
