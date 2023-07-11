@@ -1,0 +1,29 @@
+@mixin flex {
+    display: flex;
+}
+
+@mixin defineAlignment ($justContent,$alignItems){
+    @include flex;
+    justify-content: $justContent;
+    align-items: $alignItems;
+    flex-wrap: wrap;
+}
+
+@mixin max_dimensions{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin initPos{
+    left: 0;
+    top: 0;
+}
+
+@mixin posRelative{
+    position: relative;
+}
+
+@mixin posAbsolute{
+    position: absolute;
+}
+
