@@ -1,8 +1,13 @@
 
 
 const getMovies = async (url) => {
-  const data = await fetch(url).then(data => data.json())
-  return data
+  try {
+    const data = await fetch(url).then(data => data.json())
+    return data
+  } catch (error) {
+    console.log(error)
+  }
+
 }
 
 const moviesService = {
