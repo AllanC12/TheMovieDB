@@ -12,31 +12,34 @@ const Home = () => {
   const topRatedUrl = `${moviesUrl}top_rated?${apiKey}`;
   const { movies, loading, error } = useSelector((state) => state.movies);
 
-  const [moviesState,setMoviesState] = useState([])
+  const [moviesState, setMoviesState] = useState([]);
 
   useEffect(() => {
     dispatch(getMovies(topRatedUrl));
-  }, []);
+   }, []);
 
-  useEffect(()=> {
+   useEffect(()=> {
     setMoviesState(movies)
   },[movies])
 
-  console.log(moviesState.results)
-
- 
+  
+  
   if (loading) {
     return <p>Carregando...</p>;
   }
 
-  return <div className="container">
-    <h2 className="title">Os mais bem avaliados</h2>
-     <div className="movies-container">
-       {/* {moviesState.results.map(movie => (
-          <MovieCard key={movie.id} movie={movie} showLink={true}/>
-        ))} */}
-     </div>
-  </div>
+  return (
+    <div className="container">
+      <h2 className="title">Os mais bem avaliados</h2>
+      <div className="movies-container">
+        {moviesState.results && (
+           moviesState.results.map(movie => (      
+           <MovieCard key={movie.id} movie={movie} showLink={true}/>
+          ))
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Home;
