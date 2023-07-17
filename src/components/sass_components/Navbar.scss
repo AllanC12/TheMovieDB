@@ -1,1 +1,43 @@
 @import "../../mixins/sass_mixins.scss";
+
+#navbar{
+    @include flex;
+    @include defineAlignment(space-between,center);
+    padding: 1rem 2rem;
+    background-color: #121212;
+
+    h2 a{
+      @include flex;
+      @include defineAlignment(center,center);
+      gap: 0.5rem;
+    }
+
+    form{
+        @include flex;
+        gap: 0.5em;
+
+        input{
+            padding: 0.2rem .4rem;
+            border-radius: 4px;
+            border: none;
+            outline: 0;
+        }
+
+        button{
+            background-color: #F7D354;
+            border: 2px solid #F7D354;
+            border-radius: 3px;
+            color: #000;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: .5s;
+            @include defineAlignment(center,center)
+        }
+
+    }
+}
+
+#navbar form button:hover{
+    background-color: transparent;
+    color: #F7D354;
+}

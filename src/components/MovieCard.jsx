@@ -1,4 +1,4 @@
-import React from 'react'
+import "./sass_components/MovieCard.scss"
 
 import {FaStar} from 'react-icons/fa'
 
