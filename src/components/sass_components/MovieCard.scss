@@ -1,1 +1,30 @@
 @import "../../mixins/sass_mixins.scss";
+
+.movie-card{
+
+    width: 30%;
+    margin-bottom: 2.5rem;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #111;
+    @include flex;
+    @include defineAlignment(space-between,initial);
+
+ 
+    img{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .movie-card{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .movie-card{
+        width: 90%;
+    }
+}
+

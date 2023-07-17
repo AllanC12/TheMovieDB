@@ -1,3 +1,4 @@
+import "./sass_pages/MovieGrid.scss"
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getMovies } from "../slices/moviesSlice";

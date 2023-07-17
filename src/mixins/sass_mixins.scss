@@ -1,12 +1,12 @@
 @mixin flex {
     display: flex;
-}
+    flex-wrap: wrap;
+ }
 
 @mixin defineAlignment ($justContent,$alignItems){
     @include flex;
     justify-content: $justContent;
     align-items: $alignItems;
-    flex-wrap: wrap;
 }
 
 @mixin max_dimensions{
