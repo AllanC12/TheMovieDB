@@ -1,5 +1,3 @@
-
-
 const getMovies = async (url) => {
   try {
     const data = await fetch(url).then(data => data.json())

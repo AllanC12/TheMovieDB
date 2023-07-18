@@ -10,21 +10,47 @@
     @include flex;
     @include defineAlignment(space-between,initial);
 
+    img,h2,a,p{
+        margin-bottom: 1rem;
+    }
+
  
     img{
         max-width: 100%;
     }
+
+    svg{
+        color: #F7D354;
+    }
+
+    a{
+        background-color: #F7D354;
+        border: 2px solid #F7D354;
+        padding: 1rem 0.5rem;
+        border-radius: 3px;
+        color: #000;
+        font-weight: bold;
+        transition: .5s;
+        text-align: center;
+     }
+}
+
+.movie-card a:hover{
+    background-color: transparent;
+    color: #F7D354;
 }
 
 @media screen and (max-width: 800px){
     .movie-card{
-        width: 50%;
+        width: 49%;
+        gap: 10px;
     }
 }
 
 @media screen and (max-width: 500px){
     .movie-card{
         width: 90%;
+        margin: 0 auto;
     }
 }
 

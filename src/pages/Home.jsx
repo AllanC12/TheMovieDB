@@ -1,4 +1,4 @@
-import "./sass_pages/MovieGrid.scss"
+import "./sass_pages/MovieGrid.scss";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getMovies } from "../slices/moviesSlice";
@@ -17,27 +17,28 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getMovies(topRatedUrl));
-   }, []);
+  }, []);
 
-   useEffect(()=> {
-    setMoviesState(movies)
-  },[movies])
+  useEffect(() => {
+    setMoviesState(movies);
+  }, [movies]);
 
-  
-  
   if (loading) {
     return <p>Carregando...</p>;
+  }
+
+  if(error){
+    return <p>Erro ao carregar página</p>
   }
 
   return (
     <div className="container">
       <h2 className="title">Os mais bem avaliados</h2>
       <div className="movies-container">
-        {moviesState.results && (
-           moviesState.results.map(movie => (      
-           <MovieCard key={movie.id} movie={movie} showLink={true}/>
-          ))
-        )}
+        {moviesState.results &&
+          moviesState.results.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} showLink={true} />
+          ))}
       </div>
     </div>
   );
