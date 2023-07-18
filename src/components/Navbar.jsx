@@ -3,16 +3,19 @@ import "./sass_components/Navbar.scss";
 import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi";
 
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!search){
+      return
+    }
+    navigate(`/search/?q=${search}`)
     setSearch('')
-    console.log(search);
   };
 
   return (
