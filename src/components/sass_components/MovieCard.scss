@@ -10,6 +10,12 @@
     @include flex;
     @include defineAlignment(space-between,initial);
 
+    .validate-image{
+        background-color: #000;
+        padding-bottom: 146%;
+        text-align: center;
+    }
+
     img,h2,a,p{
         margin-bottom: 1rem;
     }

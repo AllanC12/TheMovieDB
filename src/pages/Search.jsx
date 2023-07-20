@@ -22,7 +22,7 @@ const Search = () => {
 
   useEffect(()=> {
     dispatch(getMovies(searchQuery))
-  },[])
+  },[searchQuery])
 
   useEffect(()=> {
     setMoviesState(movies)
