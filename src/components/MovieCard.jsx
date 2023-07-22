@@ -9,7 +9,7 @@ const urlImage = import.meta.env.VITE_IMG;
 const MovieCard = ({ movie, showLink }) => {
   return (
     <div className="movie-card">
-      {movie.backdrop_path === null ? (
+      {!movie.backdrop_path ? (
         <h2 className="validate-image">Imagem não disponível</h2>
       ) : (
         <img src={`${urlImage}${movie.poster_path}`} alt={movie.title} />
