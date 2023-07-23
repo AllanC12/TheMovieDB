@@ -40,10 +40,9 @@ const Movie = () => {
     })
   }
 
- 
-  return <div>
+  return <div className="movie-page">
     {movieState && <>
-      <MovieCard movie={movieState} showLink={false}/>
+      <MovieCard className="movie-card" movie={movieState} showLink={false}/>
       <p className="tag-line">{movieState.tagline}</p>
       <div className="info">
         <h3>

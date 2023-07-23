@@ -1,1 +1,42 @@
 @import "../../mixins/sass_mixins.scss";
+
+.movie-page{
+    color: #fff;
+    @include flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 2rem auto;
+
+    .movie-card{
+        width: 100%;
+        text-align: center;
+
+        h2{
+            font-size: 2rem;
+        }
+
+        p{
+            @include defineAlignment(center,center);
+            gap: 5px;
+        }
+     }
+
+     .tag-line{
+        text-align: center;
+        font-size: 1.3rem;
+     }
+
+     .info,.tag-line, .movie-card{
+        margin-bottom: 1em;
+     }
+
+    svg{
+        font-size: 1rem;
+        color: #F7D354;
+    }
+
+    .description{
+        line-height: 1.4rem;
+    }
+}
+

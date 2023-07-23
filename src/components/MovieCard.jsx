@@ -7,6 +7,11 @@ import { Link } from "react-router-dom";
 const urlImage = import.meta.env.VITE_IMG;
 
 const MovieCard = ({ movie, showLink }) => {
+
+  const splitNumber = (number) => {
+    return number.toFixed(1)
+  }
+
   return (
     <div className="movie-card">
       {!movie.backdrop_path ? (
@@ -17,7 +22,7 @@ const MovieCard = ({ movie, showLink }) => {
 
       <h2>{movie.title}</h2>
       <p>
-        <FaStar /> {movie.vote_average}
+        <FaStar /> {movie.vote_average && splitNumber(movie.vote_average)}
       </p>
       {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
     </div>
