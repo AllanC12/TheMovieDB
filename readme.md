@@ -8,3 +8,7 @@ _ ReactJS </br>
 _ SASS </br>
 _ CSS </br>
 _ Redux Toolkit</br>
+
+### Sobre o projeto
+
+Este projeto tem a finalidade de compartilhar com os amantes de cinema, informações mais detalhadas sobre seus filmes preferidos.Informações como: custos de produção, receita recebida, sinopses e duração.
